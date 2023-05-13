@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>heladeria hielo</title>
+</head>
+<body>
+    <h1>Elige tamaño y sabor de tu helado de hielo</h1>
+    <form method="POST" action="{% url 'hielo' %}">
+        {% csrf_token %}
+        <label for="tamano">Tamaño de tu helado:</label>
+        <select name="tamano">
+            <option value=pequeno>Helado pequeño (1 bola) (Q15)</option>
+            <option value="mediano">Helado mediano (2 bolas) (Q20)</option>
+            <option value="grande">Helado grande (3 bolas) (Q40) </option>
+        </select><br>
+<br>
+        <label for="sabor1">Selecciona el sabor de la bola 1</label>
+        <select name="sabor1">
+            <option value="chocolate">Chocolate</option>
+            <option value="vainilla">Vainilla</option>
+            <option value="fresa">Fresa</option>
+        </select><br>
+<br>
+        <label for="sabor2">Selecciona el sabor de la bola 2</label>
+        <select name="sabor2">
+            <option value="chocolate2">Chocolate</option>
+            <option value="vainilla2">Vainilla</option>
+            <option value="fresa2">Fresa</option>
+        </select><br>
+<br>
+        <label for="sabor3">Selecciona el sabor de la bola 3</label>
+        <select name="sabor3">
+            <option value="chocolate3">Chocolate</option>
+            <option value="vainilla3">Vainilla</option>
+            <option value="fresa3">Fresa</option>
+        </select><br>
+<br>
+        <label for="topping">Desea añadir topping adicional</label>
+        <select name="topping">
+            <option value="chispas">Chispas de chocolate (Q5.00)</option>
+            <option value="anicillos">Anicillos (Q3.00)</option>
+            <option value="crema">Crema batida (7.00)</option>
+            <option value="chocolate">Chocolate líquido (Q5.00)</option>
+        </select><br>
+
+        <input type="submit" value="Continuar"><br>
+
+              <br>
+
+        <a href="{% url 'index' %}" class="button">Regresar</a>
+
+
+    </form>
+</body>
+</html>

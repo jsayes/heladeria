@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Factura cremoso</title>
+</head>
+<body>
+    <h1>Factura de helado cremoso</h1>
+    <p>Su factura se ha generado con los siguientes datos:</p>
+
+    <p>Nombre: Jose Sayes</p>
+     <p>Email: p@gmail.com</p>
+     <p>Total a pagar: Q15</p>
+
+    <input type="hidden" name="nombre" value="{{ nombre }}">
+    <input type="hidden" name="email" value="{{ email }}">
+    <input type="hidden" name="tamano" value="{{ tamano }}">
+    <input type="hidden" name="topping" value="{{ topping }}">
+    <input type="hidden" name="total" value="{{ total }}">
+
+    {% csrf_token %}
+    <a href="{% url 'index' %}" class="button">Aceptar</a>
+
+</body>
+</html>

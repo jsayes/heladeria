@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>heladeria</title>
+</head>
+<body>
+    <h1>Escoge el tipo de helado</h1>
+    <form method="POST" action="{% url 'tipo' %}">
+        {% csrf_token %}
+        <label for="tipo">Tipo de helado:</label>
+        <select name="tipo">
+            <option value="cremoso">Helado cremoso</option>
+            <option value="hielo">Helado de hielo</option>
+        </select><br>
+        <input type="submit" value="Continuar"><br>
+
+
+    </form>
+</body>
+</html>
